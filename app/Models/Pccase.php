@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Gamingpc extends Model
+class Pccase extends Model
 {
     use HasFactory;
-    protected $table = 'gamingpcs';
+    protected $table = 'cases';
     protected $guarded = [];
 }

@@ -14,7 +14,9 @@
                 <div class="header-cart">
                     <a href="/cart"><i class="fa fa-shopping-cart"></i></a>
                 </div>
-                <a class="{{ (request()->is('login')) ? 'active' : '' }} btn-primary" href="/login">Login</a>
+                <div class="header-menu">
+                    <a class="{{ (request()->is('login')) ? 'active' : '' }}" href="/login">Login</a>
+                </div>
             </div>
         </div>
     </div>

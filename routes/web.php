@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PagesController;
 use App\Http\Controllers\GamingpcController;
 
 /*
@@ -14,9 +15,6 @@ use App\Http\Controllers\GamingpcController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/', [PagesController::class, 'index']);
 
 Route::resource('gaming-pc', GamingpcController::class);

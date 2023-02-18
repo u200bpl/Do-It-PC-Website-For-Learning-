@@ -20,5 +20,18 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        $this->call([
+            CaseSeeder::class,
+            CoolerSeeder::class,
+            ProcessorSeeder::class,
+            GamingpcSeeder::class,
+            GraphicscardSeeder::class,
+            HddSeeder::class,
+            MotherboardSeeder::class,
+            PowersupplySeeder::class,
+            RamSeeder::class,
+            SsdSeeder::class,
+        ]);
     }
 }

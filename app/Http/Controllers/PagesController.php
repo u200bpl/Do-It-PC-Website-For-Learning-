@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Gamingpc;
 
-class GamingpcController extends Controller
+class PagesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class GamingpcController extends Controller
     public function index()
     {
         $gamingpcs = Gamingpc::all();
-        return view('pages.gaming-pc.index', [
+        return view('welcome', [
             'gamingpcs' => $gamingpcs
         ]);
     }

@@ -1,5 +1,5 @@
 <section class="hero">
-    <div class="container">
+    <div class="container" style="width: 100%">
         <div class="hero-content">
             <img src="../img/game-pc-hero.png" alt="">
             <div class="hero-text">
