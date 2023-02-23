@@ -26,8 +26,9 @@ return new class extends Migration
             $table->foreignId('ssd_id')->constrained('ssds');
             $table->foreignId('hdd_id')->constrained('hdds');
             $table->foreignId('cooler_id')->constrained('coolers');
-            $table->foreignId('powersupply_id')->constrained('powersupplies');
+            $table->foreignId('powersuply_id')->constrained('powersuplies');
             $table->string('price');
+            $table->string('stock')->nullable();
             $table->timestamps();
         });
     }

@@ -22,16 +22,17 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
+            UserSeeder::class,
             CaseSeeder::class,
             CoolerSeeder::class,
             ProcessorSeeder::class,
-            GamingpcSeeder::class,
             GraphicscardSeeder::class,
             HddSeeder::class,
             MotherboardSeeder::class,
-            PowersupplySeeder::class,
+            PowersuplySeeder::class,
             RamSeeder::class,
             SsdSeeder::class,
+            GamingpcSeeder::class,
         ]);
     }
 }

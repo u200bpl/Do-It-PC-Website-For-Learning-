@@ -10,4 +10,8 @@ class Graphicscard extends Model
     use HasFactory;
     protected $table = 'graphicscards';
     protected $guarded = [];
+
+    public function gamingpc() {
+        return $this->hasMany(Gamingpc::class, 'graphicscard_id');
+    }
 }

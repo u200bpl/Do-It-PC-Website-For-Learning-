@@ -16,27 +16,27 @@ class CoolerSeeder extends Seeder
     public function run()
     {
         Cooler::create([
-            'name' => "Cooler 1",
+            'name' => "AMD Wraith Stealth Cooler",
             'price' => 99,
         ]);
 
         Cooler::create([
-            'name' => "Cooler 2",
+            'name' => "Endorfy Fera 5 ARGB",
             'price' => 50,
         ]);
 
         Cooler::create([
-            'name' => "Cooler 3",
+            'name' => "Endorfy Fera 5 ARGB",
             'price' => 125,
         ]);
 
         Cooler::create([
-            'name' => "Cooler 4",
+            'name' => "Corsair iCUE H100i Elite Capellix",
             'price' => 200,
         ]);
 
         Cooler::create([
-            'name' => "Cooler 5",
+            'name' => "Corsair iCUE H150i RGB Elite",
             'price' => 135,
         ]);
     }

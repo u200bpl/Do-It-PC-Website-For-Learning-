@@ -16,27 +16,27 @@ class RamSeeder extends Seeder
     public function run()
     {
         Ram::create([
-            'name' => "Ram 1",
+            'name' => "16GB DDR4",
             'price' => 99,
         ]);
 
         Ram::create([
-            'name' => "Ram 2",
+            'name' => "16GB DDR4",
             'price' => 50,
         ]);
 
         Ram::create([
-            'name' => "Ram 3",
+            'name' => "16GB DDR5",
             'price' => 125,
         ]);
 
         Ram::create([
-            'name' => "Ram 4",
+            'name' => "16GB DDR4",
             'price' => 200,
         ]);
 
         Ram::create([
-            'name' => "Ram 5",
+            'name' => "32GB DDR5",
             'price' => 135,
         ]);
     }

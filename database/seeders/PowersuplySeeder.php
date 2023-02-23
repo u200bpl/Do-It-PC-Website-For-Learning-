@@ -4,9 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Powersupply;
+use App\Models\Powersuply;
 
-class PowersupplySeeder extends Seeder
+class PowersuplySeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,28 +15,28 @@ class PowersupplySeeder extends Seeder
      */
     public function run()
     {
-        Powersupply::create([
-            'name' => "Powersupply 1",
+        Powersuply::create([
+            'name' => "650W",
             'price' => 99,
         ]);
 
-        Powersupply::create([
-            'name' => "Powersupply 2",
+        Powersuply::create([
+            'name' => "650W Gold",
             'price' => 50,
         ]);
 
-        Powersupply::create([
-            'name' => "Powersupply 3",
+        Powersuply::create([
+            'name' => "650W Gold",
             'price' => 125,
         ]);
 
-        Powersupply::create([
-            'name' => "Powersupply 4",
+        Powersuply::create([
+            'name' => "850W Gold",
             'price' => 200,
         ]);
 
-        Powersupply::create([
-            'name' => "Powersupply 5",
+        Powersuply::create([
+            'name' => "1000W Gold",
             'price' => 135,
         ]);
     }

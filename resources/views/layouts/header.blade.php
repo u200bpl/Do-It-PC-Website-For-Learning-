@@ -2,7 +2,7 @@
     <div class="container">
         <div class="navbar">
             <div class="header-logo">
-                <a href="/"><h1>Kiwipc</h1></a>
+                <a href="/"><h1>Do-It PC</h1></a>
             </div>
 
             <div class="header-menu">
@@ -15,7 +15,26 @@
                     <a href="/cart"><i class="fa fa-shopping-cart"></i></a>
                 </div>
                 <div class="header-menu">
-                    <a class="{{ (request()->is('login')) ? 'active' : '' }}" href="/login">Login</a>
+                    @if (Auth::check())
+                        <!-- <a class="{{ (request()->is('login')) ? 'active' : '' }}" href="/dashboard">{{ Auth::user()->name }}</a> -->
+                        <div class="dropdown">
+                            <span>{{ Auth::user()->name }}</span>
+                            <div class="dropdown-content">
+                                <a href="/dashboard">Dashboard</a>
+                                @if (Auth::user()->is_admin == 1)
+                                    <a href="/admin">Admin Panel</a>
+                                @endif
+                                <div class="bottom-line"></div>
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <input type="submit" value="Logout">
+                                </form>
+                            </div>
+                        </div>
+                    @else
+                        <a class="btn-primary" href="/login">Login</a>
+                        <!-- <a class="{{ (request()->is('register')) ? 'active' : '' }}" href="/register">Registreer</a> -->
+                    @endif
                 </div>
             </div>
         </div>

@@ -14,8 +14,18 @@
                                 <img src="{{ asset('img/'.$gamingpc->image) }}" alt="{{ $gamingpc->name }}">
                                 <h3>{{ $gamingpc->name }}</h3>
                                 <p>{{ $gamingpc->description }}</p>
-                                <p><span>€{{ $gamingpc->price }}</span> <strike>€499,00</strike></p>
-                                <a class="btn-grey" href="">Bekijk PC</a>
+                                <div class="gamingpcs-show-info">
+                                    <p><i class="fa-solid fa-microchip"></i> <span>CPU</span> {{ $gamingpc->processor->name }}</p>
+                                    <p><i class="fa-solid fa-display"></i> <span>GPU</span> {{ $gamingpc->graphicscard->name }}</p>
+                                    <p><i class="fa-solid fa-memory"></i> <span>RAM</span> {{ $gamingpc->ram->name }}</p>
+                                    <p><i class="fa-solid fa-hard-drive"></i> <span>SSD</span> {{ $gamingpc->ssd->name }}</p>
+
+                                    <hr>
+                                    <div class="test">
+                                        <p><span>€{{ $gamingpc->price }}</span></p>
+                                        <p class="btn-grey">Bekijk PC</p>
+                                    </div>
+                                </div>
                             </a>
                         </div>
                     @endforeach

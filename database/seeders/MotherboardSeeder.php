@@ -16,27 +16,27 @@ class MotherboardSeeder extends Seeder
     public function run()
     {
         Motherboard::create([
-            'name' => "Motherboard 1",
+            'name' => "IDK",
             'price' => 99,
         ]);
 
         Motherboard::create([
-            'name' => "Motherboard 2",
+            'name' => "B550",
             'price' => 50,
         ]);
 
         Motherboard::create([
-            'name' => "Motherboard 3",
+            'name' => "B650",
             'price' => 125,
         ]);
 
         Motherboard::create([
-            'name' => "Motherboard 4",
+            'name' => "B760",
             'price' => 200,
         ]);
 
         Motherboard::create([
-            'name' => "Motherboard 5",
+            'name' => "Z790",
             'price' => 135,
         ]);
     }

@@ -10,4 +10,8 @@ class Hdd extends Model
     use HasFactory;
     protected $table = 'hdds';
     protected $guarded = [];
+
+    public function gamingpc() {
+        return $this->hasMany(Gamingpc::class, 'hdd_id');
+    }
 }

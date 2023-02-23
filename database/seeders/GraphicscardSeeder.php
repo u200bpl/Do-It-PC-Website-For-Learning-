@@ -16,27 +16,27 @@ class GraphicscardSeeder extends Seeder
     public function run()
     {
         Graphicscard::create([
-            'name' => "Graphicscard 1",
-            'price' => 99,
+            'name' => "None",
+            'price' => 0,
         ]);
 
         Graphicscard::create([
-            'name' => "Graphicscard 2",
+            'name' => "Nvidia GeForce RTX 3060",
             'price' => 50,
         ]);
 
         Graphicscard::create([
-            'name' => "Graphicscard 3",
+            'name' => "Nvidia GeForce RTX 3070",
             'price' => 125,
         ]);
 
         Graphicscard::create([
-            'name' => "Graphicscard 4",
+            'name' => "Nvidia GeForce RTX 3080",
             'price' => 200,
         ]);
 
         Graphicscard::create([
-            'name' => "Graphicscard 5",
+            'name' => "Nvidia GeForce RTX 4080",
             'price' => 135,
         ]);
     }

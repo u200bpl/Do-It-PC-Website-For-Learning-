@@ -16,27 +16,27 @@ class ProcessorSeeder extends Seeder
     public function run()
     {
         Processor::create([
-            'name' => "Processor 1",
+            'name' => "AMD Ryzen 5 4600G",
             'price' => 99,
         ]);
 
         Processor::create([
-            'name' => "Processor 2",
+            'name' => "AMD Ryzen 5 5600",
             'price' => 50,
         ]);
 
         Processor::create([
-            'name' => "Processor 3",
+            'name' => "AMD Ryzen 5 7600X",
             'price' => 125,
         ]);
 
         Processor::create([
-            'name' => "Processor 4",
+            'name' => "Intel Core i5 13600K",
             'price' => 200,
         ]);
 
         Processor::create([
-            'name' => "Processor 5",
+            'name' => "Intel Core i7 13700K",
             'price' => 135,
         ]);
     }

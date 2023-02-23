@@ -5,13 +5,14 @@
     --tertiary: #000000;
     --light-black: rgb(51, 51, 51);
     --grey: #e5e5e5;
+    --grey-dark: #818B9D;
     --danger: #ff0000;
     --danger-dark: #b70000;
     --success: #00ff00;
     --warning: #ffff00;
     --info: #00ffff;
-    --font-size-a: 18px;
-    --font-size-p: 18px;
+    --font-size-a: 16px;
+    --font-size-p: 16px;
     --font-size-p-secondary: 13px;
     --font-size-h3: 17px;
 
@@ -25,7 +26,7 @@
 }
 
 body {
-    background-color: var(--secondary);
+    background-color: #F2F7FA;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -118,7 +119,7 @@ header {
 .header-menu a {
     text-decoration: none;
     color: var(--tertiary);
-    font-size: 18px;
+    font-size: var(--font-size-a);
     font-weight: 500;
     margin-right: 30px;
 }
@@ -146,6 +147,53 @@ header {
 
 .header-cart a:hover {
     color: var(--primary);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown span {
+    font-size: var(--font-size-a);
+    font-weight: 500;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--secondary);
+    width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    
+}
+
+.dropdown-content a {
+    font-size: var(--font-size-p);
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.bottom-line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--grey);
+    margin: 20px 0;
+}
+
+.dropdown-content input {
+    width: 100%;
+    background-color: var(--secondary);
+    cursor: pointer;
+    font-weight: 500;
+    font-size: var(--font-size-p);
+    display: inline-block;
+    border: none;
+    box-sizing: border-box;
 }
 
 /* HERO */
@@ -240,10 +288,11 @@ header {
 }
 
 .gamingpcs-show-item {
-    border: 1px solid var(--grey);
+    background-color: var(--secondary);
     border-radius: 8px;
     width: 215px;
     padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .gamingpcs-show-item h3 {
@@ -279,4 +328,179 @@ header {
 
 .gamingpcs-show-item:hover {
     transform: scale(1.05);
+}
+
+.gamingpcs-show-info > p {
+    font-size: var(--font-size-p-secondary);
+    font-weight: 300;
+}
+
+.gamingpcs-show-info > p span {
+    font-size: var(--font-size-p-secondary) !important;
+    font-weight: 500;
+}
+
+/* LOGIN/REGISTER FORM */
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.form-layout {
+    margin: 15px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 250px;
+}
+
+.form-layout label {
+    position: relative;
+    margin-left: 10px;
+    margin-bottom: -30px;
+    color: var(--primary-dark);
+}
+
+.form-layout input {
+    outline: none;
+    border: 1px solid var(--grey);
+    border-radius: 8px;
+    padding: 35px 0 10px 10px;
+    width: 100%;
+}
+
+.form-layout input:focus {
+    border: 1px solid var(--primary-dark);
+}
+
+.form input[type="submit"] {
+    border: none;
+    font-weight: 500;
+    font-size: 16px !important;
+    border-radius: 50px;
+    padding: 10px 75px;
+    cursor: pointer;
+}
+
+/* Admin Page */
+.admin {
+    position: relative;
+    padding-top: 150px;
+}
+
+.admin-item-nav-container {
+    display: flex;
+    border-bottom: 2px solid var(--grey);
+}
+
+.admin-item-nav-item {
+    margin: 0 10px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.admin-item-nav-container > .active {
+    color: var(--primary);
+}
+
+.admin-item-info {
+    margin: 10px 25px 10px 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.admin-item-info span {
+    font-weight: 600;
+}
+
+.admin-item-info a {
+    color: var(--grey-dark);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.admin table {
+    background-color: var(--secondary);
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.admin table th {
+    color: var(--tertiary);
+    padding: 10px 0 10px 15px;
+}
+
+.admin table td {
+    border-top: 2px solid var(--grey);
+    padding: 10px 0 10px 15px;
+}
+
+.admin-table-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin table td a {
+    text-decoration: none;
+    color: var(--tertiary);
+}
+
+.admin table td button {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    color: var(--danger);
+}
+
+/* CREATE PC */
+.create-pc {
+    padding-top: 150px;
+}
+
+form {
+    /* background-color: red; */
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: var(--secondary);
+    border-radius: 8px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 45%;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid var(--grey);
+    border-radius: 8px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border: 1px solid var(--primary-dark);
+}
+
+.form-group select {
+    padding: 10px;
+    border: 1px solid var(--grey);
+    border-radius: 8px;
+    outline: none;
+}
+
+.form-group select:focus {
+    border: 1px solid var(--primary-dark);
 }

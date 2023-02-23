@@ -16,27 +16,27 @@ class SsdSeeder extends Seeder
     public function run()
     {
         Ssd::create([
-            'name' => "SSD 1",
+            'name' => "500GB NVMe",
             'price' => 99,
         ]);
 
         Ssd::create([
-            'name' => "SSD 2",
+            'name' => "1TB NVMe",
             'price' => 50,
         ]);
 
         Ssd::create([
-            'name' => "SSD 3",
+            'name' => "1TB NVMe",
             'price' => 125,
         ]);
 
         Ssd::create([
-            'name' => "SSD 4",
+            'name' => "1TB NVMe",
             'price' => 200,
         ]);
 
         Ssd::create([
-            'name' => "SSD 5",
+            'name' => "2TB NVMe",
             'price' => 135,
         ]);
     }

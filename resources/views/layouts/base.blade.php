@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Kiwipc</title>
+        <title>Do-It PC</title>
 
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         <script src="https://kit.fontawesome.com/268c8277db.js" crossorigin="anonymous"></script>

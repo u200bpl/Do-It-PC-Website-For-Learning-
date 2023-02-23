@@ -10,4 +10,8 @@ class Motherboard extends Model
     use HasFactory;
     protected $table = 'motherboards';
     protected $guarded = [];
+
+    public function gamingpc() {
+        return $this->hasMany(Gamingpc::class, 'motherboard_id');
+    }
 }

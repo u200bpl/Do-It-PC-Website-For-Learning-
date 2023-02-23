@@ -10,4 +10,8 @@ class Processor extends Model
     use HasFactory;
     protected $table = 'processors';
     protected $guarded = [];
+    
+    public function gamingpc() {
+        return $this->hasMany(Gamingpc::class, 'processor_id');
+    }
 }

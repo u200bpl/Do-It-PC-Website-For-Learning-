@@ -10,4 +10,8 @@ class Ram extends Model
     use HasFactory;
     protected $table = 'rams';
     protected $guarded = [];
+
+    public function gamingpc() {
+        return $this->hasMany(Gamingpc::class, 'ram_id');
+    }
 }

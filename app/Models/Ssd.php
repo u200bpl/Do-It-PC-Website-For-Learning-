@@ -10,4 +10,8 @@ class Ssd extends Model
     use HasFactory;
     protected $table = 'ssds';
     protected $guarded = [];
+
+    public function gamingpc() {
+        return $this->hasMany(Gamingpc::class, 'ssd_id');
+    }
 }
