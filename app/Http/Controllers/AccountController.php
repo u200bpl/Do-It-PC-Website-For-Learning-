@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Gamingpc;
 use App\Models\User;
+use App\Models\Country;
 
-class AdminController extends Controller
+class AccountController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,9 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('pages.admin.index', [
-            'gamingpcs' => Gamingpc::all(),
-            'users' => User::all()
+        return view('pages.account.index', [
+            'users' => User::all(),
+            'countries' => Country::all(),
         ]);
     }
 
@@ -73,7 +73,29 @@ class AdminController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'first_name' => 'required|max:255|min:3',
+            'last_name' => 'required|max:255|min:3',
+            'phone' => 'required|max:255|min:3',
+            'address' => 'required|max:255|min:3',
+            'number' => 'required|max:255|min:1',
+            'city' => 'required|max:255|min:3',
+            'zip' => 'required|max:255|min:3',
+            'country_id' => 'required',
+        ]);
+
+        $user = User::findOrFail($id);
+        $user->first_name = $request->first_name;
+        $user->last_name = $request->last_name;
+        $user->phone = $request->phone;
+        $user->address = $request->address;
+        $user->number = $request->number;
+        $user->city = $request->city;
+        $user->zip = $request->zip;
+        $user->country_id = $request->country_id;
+        $user->save();
+
+        return redirect()->route('account.index');
     }
 
     /**

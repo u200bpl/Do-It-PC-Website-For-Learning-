@@ -20,11 +20,11 @@ class UserSeeder extends Seeder
             'last_name' => 'Overman',
             'email' => 'dennis.overman@home.nl',
             'phone' => '0612345678',
-            'address' => 'Benthuizenstraat 27',
+            'address' => 'Benthuizenstraat',
+            'number' => '27',
             'city' => 'Tilburg',
-            'state' => 'Noord-Brabant',
             'zip' => '5043 AT',
-            'country' => 'NL',
+            'country_id' => 1,
             'password' => \Hash::make('1234'),
             'is_admin' => true
         ]);
@@ -34,11 +34,11 @@ class UserSeeder extends Seeder
             'last_name' => 'Admin',
             'email' => 'admin@doitpc.nl',
             'phone' => '0612345678',
-            'address' => 'Kerkstraat 1',
+            'address' => 'Kerkstraat',
+            'number' => '1',
             'city' => 'Arnhem',
-            'state' => 'Gelderland',
             'zip' => '6811 AA',
-            'country' => 'NL',
+            'country_id' => 1,
             'password' => \Hash::make('1234'),
             'is_admin' => true
         ]);
@@ -48,11 +48,11 @@ class UserSeeder extends Seeder
             'last_name' => 'Doe',
             'email' => 'john@doe.be',
             'phone' => '0612345678',
-            'address' => 'Kerkstraat 69',
+            'address' => 'Kerkstraat',
+            'number' => '69',
             'city' => 'Brussel',
-            'state' => 'Brussel',
             'zip' => '6811 XA',
-            'country' => 'BE',
+            'country_id' => 2,
             'password' => \Hash::make('1234'),
             'is_admin' => false
         ]);

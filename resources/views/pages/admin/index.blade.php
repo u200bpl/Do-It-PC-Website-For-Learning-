@@ -77,7 +77,11 @@
                         <td>{{ $gamingpc->graphicscard->name }}</td>
                         <td>{{ $gamingpc->ram->name }}</td>
                         <td>{{ $gamingpc->ssd->name }}</td>
-                        <td>{{ $gamingpc->stock }}</td>
+                        @if ($gamingpc->stock > 0)
+                            <td>{{ $gamingpc->stock }}</td>
+                        @else
+                            <td style="color: var(--danger)">Out of stock</td>
+                        @endif
                         <td>{{ $gamingpc->price }}</td>
                         <td>
                             <div class="admin-table-actions">

@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\GamingpcController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AccountController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,10 @@ use App\Http\Controllers\AdminController;
 Route::get('/', [PagesController::class, 'index']);
 // Route::resource('gaming-pc', GamingpcController::class);
 Route::get('/gaming-pc', [GamingpcController::class, 'index']);
+
+Route::middleware(['web', 'auth'])->group(function () {
+    Route::resource('/account', AccountController::class);
+});
 
 Route::middleware(['web', 'isAdmin'])->group(function () {
     Route::resource('admin', AdminController::class);

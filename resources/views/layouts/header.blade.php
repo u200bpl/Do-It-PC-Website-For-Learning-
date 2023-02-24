@@ -17,9 +17,9 @@
                 <div class="header-menu">
                     @if (Auth::check())
                         <div class="dropdown">
-                            <span>{{ Auth::user()->first_name }}</span>
+                            <span><i class="fa-solid fa-user-check"></i> {{ Auth::user()->first_name }}</span>
                             <div class="dropdown-content">
-                                <a href="/dashboard">Dashboard</a>
+                                <a href="/account">Account</a>
                                 @if (Auth::user()->is_admin == 1)
                                     <a href="/admin">Admin Panel</a>
                                 @endif

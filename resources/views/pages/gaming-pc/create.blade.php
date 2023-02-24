@@ -26,7 +26,7 @@
                 <input type="text" name="image" id="image" class="form-control">
             </div>
 
-            <div class="form-group custom-select">
+            <div class="form-group">
                 <label for="processor_id">Processor</label>
                 <select name="processor_id" id="processor_id" class="form-control">
                     @foreach ($processors as $processor)
