@@ -16,9 +16,8 @@
                 </div>
                 <div class="header-menu">
                     @if (Auth::check())
-                        <!-- <a class="{{ (request()->is('login')) ? 'active' : '' }}" href="/dashboard">{{ Auth::user()->name }}</a> -->
                         <div class="dropdown">
-                            <span>{{ Auth::user()->name }}</span>
+                            <span>{{ Auth::user()->first_name }}</span>
                             <div class="dropdown-content">
                                 <a href="/dashboard">Dashboard</a>
                                 @if (Auth::user()->is_admin == 1)

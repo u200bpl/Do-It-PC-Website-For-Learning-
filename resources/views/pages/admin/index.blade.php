@@ -78,7 +78,7 @@
                         <td>{{ $gamingpc->ram->name }}</td>
                         <td>{{ $gamingpc->ssd->name }}</td>
                         <td>{{ $gamingpc->stock }}</td>
-                        <td style="color: var(--primary)">{{ $gamingpc->price }}</td>
+                        <td>{{ $gamingpc->price }}</td>
                         <td>
                             <div class="admin-table-actions">
                                 <a href="/admin/{{ $gamingpc->id }}/edit"><i class="fa-solid fa-pen-to-square"></i></a>
@@ -113,7 +113,7 @@
                 </tr>
                 @foreach ($users as $user)
                     <tr>
-                        <td>{{ $user->name }}</td>
+                        <td>{{ $user->first_name }} {{ $user->last_name }}</td>
                         <td>{{ $user->email }}</td>
                         @if ($user->is_admin == 1)
                             <td>Yes</td>

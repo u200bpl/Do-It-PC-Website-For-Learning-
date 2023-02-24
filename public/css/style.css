@@ -362,7 +362,7 @@ header {
     position: relative;
     margin-left: 10px;
     margin-bottom: -30px;
-    color: var(--primary-dark);
+    color: var(--tertiary);
 }
 
 .form-layout input {
@@ -375,6 +375,7 @@ header {
 
 .form-layout input:focus {
     border: 1px solid var(--primary-dark);
+    color: var(--primary-dark);
 }
 
 .form input[type="submit"] {
