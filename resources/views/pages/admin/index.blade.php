@@ -29,7 +29,7 @@
             <table>
                 <tr>
                     <th>Order ID</th>
-                    <th>User</th>
+                    <th>Product</th>
                     <th>Computer</th>
                     <th>Price</th>
                     <th>Status</th>

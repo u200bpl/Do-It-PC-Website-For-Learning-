@@ -3,6 +3,17 @@
 
 <form class="form" method="POST" action="{{ route('login') }}">
     @csrf
+
+    @if ($errors->any())
+        <div class="alert">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
     <div class="form-section">
         <div class="form-layout">
             <label for="email">Email</label>
@@ -16,10 +27,6 @@
 
         <div class="form-layout">
             <input type="submit" value="Inloggen" class="btn-secondary">
-        </div>
-        
-        <div class="form-layout">
-            <a href="/register">Nog geen account?</a>
         </div>
     </div>
 </form>

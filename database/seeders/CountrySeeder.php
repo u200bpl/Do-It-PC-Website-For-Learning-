@@ -17,10 +17,12 @@ class CountrySeeder extends Seeder
     {
         Country::create([
             'name' => 'NL',
+            'placeholder' => 'Nederland',
         ]);
 
         Country::create([
             'name' => 'BE',
+            'placeholder' => 'België',
         ]);
     }
 }

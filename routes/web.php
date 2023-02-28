@@ -19,7 +19,6 @@ use App\Http\Controllers\AccountController;
 */
 
 Route::get('/', [PagesController::class, 'index']);
-// Route::resource('gaming-pc', GamingpcController::class);
 Route::get('/gaming-pc', [GamingpcController::class, 'index']);
 
 Route::middleware(['web', 'auth'])->group(function () {
@@ -28,6 +27,7 @@ Route::middleware(['web', 'auth'])->group(function () {
 
 Route::middleware(['web', 'isAdmin'])->group(function () {
     Route::resource('admin', AdminController::class);
+    
     Route::get('/gaming-pc/create', [GamingpcController::class, 'create']);
     Route::post('/gaming-pc', [GamingpcController::class, 'store'])->name('gamingpc.store');
     Route::delete('/gaming-pc/{id}', [GamingpcController::class, 'destroy'])->name('gamingpc.destroy'); 

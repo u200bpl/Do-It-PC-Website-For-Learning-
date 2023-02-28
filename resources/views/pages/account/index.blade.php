@@ -1,41 +1,30 @@
 @extends('layouts.base')
 @section('content')
 
-<section class="admin">
+<section class="user">
     <div class="container">
-        <section class="admin-item-nav">
-            <div class="admin-item-nav-container">
-                <div onclick="myFunction()" id="admin-item-order-text" class="admin-item-nav-item">
+        <section class="user-item-nav">
+            <div class="user-item-nav-container">
+                <div onclick="myFunction()" id="user-item-order-text" class="user-item-nav-item">
                     <p>Gegevens</p>
                 </div>
 
-                <div onclick="myFunction2()" id="admin-item-computer-text" class="admin-item-nav-item">
+                <div onclick="myFunction2()" id="user-item-computer-text" class="user-item-nav-item">
                     <p>Bestellingen</p>
                 </div>
 
-                <div onclick="myFunction3()" id="admin-item-user-text" class="admin-item-nav-item">
+                <div onclick="myFunction3()" id="user-item-user-text" class="user-item-nav-item">
                     <p>Instellingen</p>
                 </div>
             </div>
         </section>
 
         <!-- GEGEVENS SECTION -->
-        <section class="admin-item-computer" id="admin-item-order">
-            <div class="admin-item-info">
-                <div class="admin-item-left">
-                    <form action="{{route('account.update', Auth::user()->id)}}" method="POST">
+        <section class="user-item-computer" id="user-item-order">
+            <div class="user-item-info">
+                <div class="user-item-left">
+                    <form action="">
                         @csrf
-                        @method('patch')
-
-                        @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
 
                         <div class="form-group">
                             <label for="email">Email</label>
@@ -63,20 +52,10 @@
                     </form>
                 </div>
 
-                <div class="admin-item-right">
+                <div class="user-item-right">
                     <form action="{{route('account.update', Auth::user()->id)}}" method="POST">
                         @csrf
                         @method('patch')
-
-                        @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
 
                         <div class="form-group">
                             <label for="first_name">Voornaam</label>
@@ -117,7 +96,7 @@
                             <label for="country_id">Land</label>
                             <select name="country_id" id="country_id" class="form-control">
                                 @foreach ($countries as $country)
-                                    <option value="{{ $country->id }}" {{ $country->id == Auth::user()->country_id ? 'selected' : '' }}>{{ $country->name }}</option>
+                                    <option value="{{ $country->id }}" {{ $country->id == Auth::user()->country_id ? 'selected' : '' }}>{{ $country->placeholder }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -130,19 +109,34 @@
             </div>
         </section>
 
-        <!-- COMPUTER SECTION -->
-        <section class="admin-item-computer" id="admin-item-computer">
-            <div class="admin-item-info">
-                <div class="admin-item-left">
-                    <p><span>Bestellingen</span></p>
+        <!-- ORDER HISTORY SECTION -->
+        <section class="user-item-computer" id="user-item-computer">
+            <div class="user-item-info">
+                <div class="user-item-left" style="margin-left: 50px">
+                    <p><span>1 Bestelling</span></p>
                 </div>
             </div>
+
+            <table>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Game PC Pro</td>
+                    <td>€ 1999,00</td>
+                    <td>Building</td>
+                </tr>
+            </table>
         </section>
 
         <!-- USER SECTION -->
-        <section class="admin-item-computer" id="admin-item-user">
-            <div class="admin-item-info">
-                <div class="admin-item-left">
+        <section class="user-item-computer" id="user-item-user">
+            <div class="user-item-info">
+                <div class="user-item-left">
                     <p><span>Instellingen</span></p>
                 </div>
             </div>
@@ -154,12 +148,12 @@
     window.onload = myFunction;
 
     function myFunction() {
-        var x = document.getElementById("admin-item-order");
-        var xp = document.getElementById("admin-item-order-text");
-        var y = document.getElementById("admin-item-computer");
-        var yp = document.getElementById("admin-item-computer-text");
-        var z = document.getElementById("admin-item-user");
-        var zp = document.getElementById("admin-item-user-text");
+        var x = document.getElementById("user-item-order");
+        var xp = document.getElementById("user-item-order-text");
+        var y = document.getElementById("user-item-computer");
+        var yp = document.getElementById("user-item-computer-text");
+        var z = document.getElementById("user-item-user");
+        var zp = document.getElementById("user-item-user-text");
         x.style.display = "block";
         y.style.display = "none";
         z.style.display = "none";
@@ -170,12 +164,12 @@
     }
 
     function myFunction2() {
-        var x = document.getElementById("admin-item-order");
-        var xp = document.getElementById("admin-item-order-text");
-        var y = document.getElementById("admin-item-computer");
-        var yp = document.getElementById("admin-item-computer-text");
-        var z = document.getElementById("admin-item-user");
-        var zp = document.getElementById("admin-item-user-text");
+        var x = document.getElementById("user-item-order");
+        var xp = document.getElementById("user-item-order-text");
+        var y = document.getElementById("user-item-computer");
+        var yp = document.getElementById("user-item-computer-text");
+        var z = document.getElementById("user-item-user");
+        var zp = document.getElementById("user-item-user-text");
         x.style.display = "none";
         y.style.display = "block";
         z.style.display = "none";
@@ -186,12 +180,12 @@
     }
 
     function myFunction3() {
-        var x = document.getElementById("admin-item-order");
-        var xp = document.getElementById("admin-item-order-text");
-        var y = document.getElementById("admin-item-computer");
-        var yp = document.getElementById("admin-item-computer-text");
-        var z = document.getElementById("admin-item-user");
-        var zp = document.getElementById("admin-item-user-text");
+        var x = document.getElementById("user-item-order");
+        var xp = document.getElementById("user-item-order-text");
+        var y = document.getElementById("user-item-computer");
+        var yp = document.getElementById("user-item-computer-text");
+        var z = document.getElementById("user-item-user");
+        var zp = document.getElementById("user-item-user-text");
         x.style.display = "none";
         y.style.display = "none";
         z.style.display = "block";

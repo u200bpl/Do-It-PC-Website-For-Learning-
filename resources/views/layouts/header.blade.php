@@ -20,6 +20,7 @@
                             <span><i class="fa-solid fa-user-check"></i> {{ Auth::user()->first_name }}</span>
                             <div class="dropdown-content">
                                 <a href="/account">Account</a>
+                                <a href="/support">Support</a>
                                 @if (Auth::user()->is_admin == 1)
                                     <a href="/admin">Admin Panel</a>
                                 @endif
@@ -32,7 +33,6 @@
                         </div>
                     @else
                         <a class="btn-primary" href="/login">Login</a>
-                        <!-- <a class="{{ (request()->is('register')) ? 'active' : '' }}" href="/register">Registreer</a> -->
                     @endif
                 </div>
             </div>
