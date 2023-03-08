@@ -10,7 +10,7 @@
                 <div class="gamingpcs-show-container">
                     @foreach ($gamingpcs as $gamingpc)
                         <div class="gamingpcs-show-item">
-                            <a href="/gaming-pc">
+                            <a href="/gaming-pc/{{$gamingpc->id}}">
                                 <img src="{{ asset('img/'.$gamingpc->image) }}" alt="{{ $gamingpc->name }}">
                                 <h3>{{ $gamingpc->name }}</h3>
                                 <p>{{ $gamingpc->description }}</p>
@@ -23,7 +23,11 @@
                                     <hr>
                                     <div class="test">
                                         <p><span>€{{ $gamingpc->price }}</span></p>
-                                        <p class="btn-grey">Bekijk PC</p>
+                                        @if ($gamingpc->stock > 0)
+                                            <p class="btn-secondary">Bekijk PC</p>
+                                        @else
+                                            <p class="btn-grey">Out of stock</p>
+                                        @endif
                                     </div>
                                 </div>
                             </a>

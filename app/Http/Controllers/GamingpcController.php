@@ -54,10 +54,8 @@ class GamingpcController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
-        // dd($request->all());
         $request->validate([
             'name' => 'required|max:255|min:3|unique:gamingpcs',
-            // 'img' => 'required',
             'processor_id' => 'required',
             'motherboard_id' => 'required',
             'graphicscard_id' => 'required',
@@ -82,7 +80,9 @@ class GamingpcController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('pages.gaming-pc.show', [
+            'gamingpc' => Gamingpc::findorfail($id)
+        ]);                 
     }
 
     /**
