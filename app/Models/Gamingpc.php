@@ -11,6 +11,10 @@ class Gamingpc extends Model
     protected $table = 'gamingpcs';
     protected $guarded = [];
 
+    public function gamingpc() {
+        return $this->hasMany(Performance::class, 'performance_id');
+    }
+
     public function cooler(){
         return $this->belongsTo(Cooler::class, "cooler_id");
     }

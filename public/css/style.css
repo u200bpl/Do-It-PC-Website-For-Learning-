@@ -1,6 +1,8 @@
 :root {
     --primary: #3fd50d;
+    --primary-rgb: 63, 213, 13;
     --primary-dark: #2f9e0a;
+    --primary-dark-rgb: 47, 158, 10;
     --secondary: #ffffff;
     --tertiary: #000000;
     --light-black: rgb(51, 51, 51);
@@ -34,6 +36,14 @@ body {
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 10px;
+}
+
+.admin-container {
+    display: block;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 10px;
+    z-index: 1;
 }
 
 .btn-primary {
@@ -103,6 +113,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
+}
+
+.header-logo img {
+    width: 175px;
 }
 
 .header-menu {
@@ -375,6 +389,17 @@ header {
     width: 100%;
 }
 
+.show-right hr {
+    margin: 10px 0;
+    width: 50px;
+    color: var(--primary);
+}
+
+.show-right > .price {
+    font-size: var(--font-size-p);
+    font-weight: 500;
+}
+
 .show-right h1 {
     font-size: 30px;
     font-weight: 800;
@@ -466,6 +491,83 @@ header {
     border-radius: 50px;
     padding: 10px 75px;
     cursor: pointer;
+}
+
+/* Peroformance Page */
+.performance {
+    margin-top: 150px;
+    padding: 50px 0;
+    background-color: var(--grey);
+}
+
+.performance .description {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 50px;
+    width: 75%;
+}
+
+.performance .description > h2 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.performance .description > h2 > span {
+    color: var(--primary-dark);
+}
+
+.performance .game-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.performance .game-container > .game {
+    display: block;
+    width: 250px;
+    height: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--secondary);
+}
+
+.performance .game-container > .game > img {
+    width: 100%;
+    height: 333.25px;
+}
+
+.performance .game-container > .game > .info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    font-size: var(--font-size-p-secondary);
+    margin: 0 10px 10px 10px;
+    max-width: 230px;
+    min-width: 35px;
+}
+
+.performance .game-container > .game > .info > .fps {
+    background-color: var(--primary);
+}
+
+.performance .game-container > .game > .info > .fps > p {
+    font-weight: 600;
+    margin: 0 10px 0 0;
+    float: right;
+}
+
+.performance .game-container > .game > .info > .fps-error {
+    background-color: var(--danger);
+}
+
+.performance .game-container > .game > .info > .fps-warning {
+    background-color: var(--warning);
+}
+
+.performance .game-container > .game > .info > h5 {
+    font-weight: 600;
+    font-size: var(--font-size-p-secondary);
 }
 
 /* Admin Page */

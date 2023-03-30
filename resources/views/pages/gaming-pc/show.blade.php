@@ -10,6 +10,10 @@
 
             <div class="show-right">
                 <h1>{{ $gamingpc->name }}</h1>
+                <div class="price">
+                    <p><span>€{{ $gamingpc->price }}</span></p>
+                </div>
+                <hr>
                 <div class="show-spec">
                     <p><i class="icon fa-solid fa-microchip"></i> <span>CPU</span> {{ $gamingpc->processor->name }}</p>
                     <p><i class="icon fa-solid fa-display"></i> <span>GPU</span> {{ $gamingpc->graphicscard->name }}</p>
@@ -30,5 +34,7 @@
         </div>
     </div>
 </section>
+
+@include('layouts.performance')
 
 @endsection

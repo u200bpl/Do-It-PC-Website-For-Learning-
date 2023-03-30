@@ -6,6 +6,8 @@ use App\Http\Controllers\PagesController;
 use App\Http\Controllers\GamingpcController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,19 +21,26 @@ use App\Http\Controllers\AccountController;
 */
 
 Route::get('/', [PagesController::class, 'index']);
-Route::get('/gaming-pc', [GamingpcController::class, 'index'])->name('gamingpc.index');
-Route::get('/gaming-pc/{id}', [GamingpcController::class, 'show'])->name('gamingpc.show');
 
 Route::middleware(['web', 'auth'])->group(function () {
     Route::resource('/account', AccountController::class);
 });
 
+
 Route::middleware(['web', 'isAdmin'])->group(function () {
-    Route::resource('admin', AdminController::class);
-    
+    Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+    Route::get('/admin/orders', [OrderController::class, 'index'])->name('order.index');
+    Route::get('/admin/computers', [GamingpcController::class, 'admin'])->name('gamingpc.index');
+    Route::get('/admin/users', [UserController::class, 'index'])->name('user.index');
+
     Route::get('/gaming-pc/create', [GamingpcController::class, 'create'])->name('gamingpc.create');
+    Route::get('/gaming-pc/{id}/edit', [GamingpcController::class, 'edit'])->name('gamingpc.edit');
     Route::post('/gaming-pc', [GamingpcController::class, 'store'])->name('gamingpc.store');
-    Route::delete('/gaming-pc/{id}', [GamingpcController::class, 'destroy'])->name('gamingpc.destroy'); 
+    Route::put('/gaming-pc/{id}', [GamingpcController::class, 'update'])->name('gamingpc.update');
+    Route::delete('/gaming-pc/{id}', [GamingpcController::class, 'destroy'])->name('gamingpc.destroy');
 });
+
+Route::get('/gaming-pc', [GamingpcController::class, 'index'])->name('gamingpc.index');
+Route::get('/gaming-pc/{id}', [GamingpcController::class, 'show'])->name('gamingpc.show');
 
 require __DIR__.'/auth.php';

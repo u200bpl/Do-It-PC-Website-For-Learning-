@@ -34,6 +34,8 @@ class DatabaseSeeder extends Seeder
             RamSeeder::class,
             SsdSeeder::class,
             GamingpcSeeder::class,
+            GamesSeeder::class,
+            PerformanceSeeder::class,
         ]);
     }
 }

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="navbar">
             <div class="header-logo">
-                <a href="/"><h1>Do-It PC</h1></a>
+                <a href="/"><h1><img src="{{ asset('img/logo.png') }}" alt="Doit PC"></h1></a>
             </div>
 
             <div class="header-menu">

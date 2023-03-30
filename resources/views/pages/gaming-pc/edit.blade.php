@@ -1,9 +1,11 @@
 @extends('layouts.base')
 @section('content')
 
+@include('layouts.admin.navbar')
+
 <section class="create-pc">
     <div class="container">
-        <form action="{{route('gamingpc.store')}}" method="POST">
+        <form action="{{route('gamingpc.update', $gamingpc->id)}}" method="POST">
             @csrf
 
             @if ($errors->any())
@@ -17,13 +19,13 @@
             @endif
 
             <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" class="form-control">
+                <label for="name">Naam</label>
+                <input type="text" name="name" id="name" class="form-control" value="{{ $gamingpc->name }}">
             </div>
 
             <div class="form-group">
-                <label for="image">Image</label>
-                <input type="text" name="image" id="image" class="form-control">
+                <label for="image">Afbeelding</label>
+                <input type="text" name="image" id="image" class="form-control" value="{{ $gamingpc->image }}">
             </div>
 
             <div class="form-group">
@@ -113,7 +115,7 @@
             </div>
 
             <div class="form-group">
-                <button type="submit" class="btn btn-primary">Create</button>
+                <button type="submit" class="btn btn-primary">Edit</button>
             </div>
         </form>
     </div>

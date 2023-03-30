@@ -3,11 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Gamingpc;
-use App\Models\User;
 use App\Models\Order;
 
-class AdminController extends Controller
+class OrderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +14,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('pages.admin.index', [
-            'gamingpcs' => Gamingpc::all(),
-            'users' => User::all()
+        return view('pages.admin.order.index', [
+            'orders' => Order::all()
         ]);
     }
 
