@@ -137,6 +137,23 @@ header {
     margin-right: 30px;
 }
 
+.header-menu .btn {
+    border-radius: 8px;
+    padding: 5px 10px;
+    border: 2px solid var(--light-black);
+    background-color: var(--light-black);
+    color: var(--secondary);
+    margin: 0;
+}
+
+.header-menu .btn:hover {
+    border-radius: 8px;
+    padding: 5px 10px;
+    border: 2px solid var(--primary);
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
 .header-menu a:hover {
     color: var(--primary);
 }
@@ -171,13 +188,15 @@ header {
     font-size: var(--font-size-a);
     font-weight: 500;
     cursor: pointer;
-    padding: 5px;
+    padding: 5px 10px;
     border-radius: 8px;
+    border: 2px solid var(--grey);
 }
 
 .dropdown > span:hover {
     /* background-color: rgba(63, 213, 13, 0.2); */
     color: var(--primary);
+    border: 2px solid var(--primary);
 }
   
 .dropdown-content {

@@ -32,7 +32,7 @@
                             </div>
                         </div>
                     @else
-                        <a class="{{ (request()->is('login*')) ? 'active' : '' }}" href="/login"><i class="fa-solid fa-user-xmark"></i> Inloggen</a>
+                        <a class="btn {{ (request()->is('login*')) ? 'active' : '' }}" href="/login"><i class="fa-solid fa-user-xmark"></i> Inloggen</a>
                     @endif
                 </div>
             </div>
