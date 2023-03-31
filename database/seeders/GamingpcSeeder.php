@@ -16,7 +16,7 @@ class GamingpcSeeder extends Seeder
     public function run()
     {
         Gamingpc::create([
-            'name' => "Game PC Budget",
+            'name' => "Game PC A46G",
             'description' => "De betaalbare Game PC voor iedere gamer!",
             'image' => "game-pc-budget.png",
             'case_id' => 1,
@@ -33,7 +33,7 @@ class GamingpcSeeder extends Seeder
         ]);
 
         Gamingpc::create([
-            'name' => "Game PC Normal",
+            'name' => "Game PC A56 RT36",
             'description' => "De betaalbare Game PC voor iedere gamer!",
             'image' => "game-pc-normal.png",
             'case_id' => 2,
@@ -50,7 +50,7 @@ class GamingpcSeeder extends Seeder
         ]);
 
         Gamingpc::create([
-            'name' => "Game PC Pro",
+            'name' => "Game PC A76X RT37",
             'description' => "De betaalbare Game PC voor iedere gamer!",
             'image' => "game-pc-pro.png",
             'case_id' => 3,
@@ -67,7 +67,7 @@ class GamingpcSeeder extends Seeder
         ]);
 
         Gamingpc::create([
-            'name' => "Game PC Max",
+            'name' => "Game PC I136K RT38",
             'description' => "De betaalbare Game PC voor iedere gamer!",
             'image' => "game-pc-max.png",
             'case_id' => 4,
@@ -84,7 +84,7 @@ class GamingpcSeeder extends Seeder
         ]);
 
         Gamingpc::create([
-            'name' => "Game PC Ultimate",
+            'name' => "Game PC I137K RT48",
             'description' => "De betaalbare Game PC voor iedere gamer!",
             'image' => "game-pc-ultimate.png",
             'case_id' => 5,
