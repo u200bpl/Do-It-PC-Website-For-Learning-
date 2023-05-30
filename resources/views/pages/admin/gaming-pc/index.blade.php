@@ -33,7 +33,7 @@
                     <th>Actions</th>
                 </tr>
                 @foreach ($gamingpcs as $gamingpc)
-                    <tr>
+                    <tr class="info-row">
                         <td>{{ $gamingpc->name }}</td>
                         <td>{{ $gamingpc->processor->name }}</td>
                         <td>{{ $gamingpc->graphicscard->name }}</td>

@@ -28,7 +28,7 @@
 </section>
 
 <style>
-ul {
+.admin-navbar ul {
     z-index: 998;
     list-style-type: none;
     margin: 89px 0 0 0;
@@ -41,7 +41,7 @@ ul {
     overflow: auto;
 }
 
-li a {
+.admin-navbar li a {
     display: block;
     color: var(--tertiary);
     padding: 8px 16px;
@@ -51,51 +51,51 @@ li a {
     margin: 15px;
 }
 
-li a.active {
+.admin-navbar li a.active {
     background-color: var(--primary);
     color: var(--tertiary);
 }
 
-li a:hover:not(.active) {
+.admin-navbar li a:hover:not(.active) {
     background-color: rgba(var(--primary-rgb), 0.5);
 }
 
-.dropdown-btn {
+.admin-navbar .dropdown-btn {
     margin: 15px;
 }
 
-li button {
+.admin-navbar li button {
     width: 100%;
     text-align: left;
     background-color: transparent;
     border: none;
     color: var(--tertiary);
-    padding: 8px 16px;
+    padding: 12px 18px;
     font-size: var(--font-size-a);
     border-radius: 10px;
     font-weight: 500;
     margin-bottom: -15px;
 }
 
-li button:hover {
+.admin-navbar li button:hover {
     cursor: pointer;
     background-color: rgba(var(--primary-rgb), 0.5);
     color: var(--tertiary);
 }
 
-li button i {
+.admin-navbar li button i {
     float: right;
     margin-top: 8px;
     font-size: 5px;
 }
 
-.dropdown-container {
+.admin-navbar .dropdown-container {
     display: none;
     padding-left: 8px;
     flex-direction: column;
 }
 
-.dropdown-container a {
+.admin-navbar .dropdown-container a {
     color: var(--tertiary);
     padding: 4px 18px;
     margin: 0 25px;
@@ -105,12 +105,12 @@ li button i {
     border-left: 2px solid var(--grey-dark);
 }
 
-.dropdown-container a:hover {
+.admin-navbar .dropdown-container a:hover {
     color: var(--primary);
     border-left: 2px solid var(--primary);
 }
 
-.active button i {
+.admin-navbar .active button i {
     color: var(--primary);
 }
 </style>

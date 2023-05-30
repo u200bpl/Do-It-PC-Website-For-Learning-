@@ -1,3 +1,4 @@
+@if ($performances->count() > 0)
 <section class="performance">
     <div class="container">
         <div class="description">
@@ -34,3 +35,4 @@
         </div>
     </div>
 </section>
+@endif

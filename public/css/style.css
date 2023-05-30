@@ -1,5 +1,5 @@
 :root {
-    --primary: #3fd50d;
+    --primary: #024B95;
     --primary-rgb: 63, 213, 13;
     --primary-dark: #2f9e0a;
     --primary-dark-rgb: 47, 158, 10;
@@ -13,6 +13,7 @@
     --success: #00ff00;
     --warning: #ffff00;
     --info: #00ffff;
+    --white: #ffffff;
     --font-size-a: 16px;
     --font-size-p: 16px;
     --font-size-p-secondary: 13px;
@@ -40,8 +41,8 @@ body {
 
 .admin-container {
     display: block;
-    max-width: 1170px;
-    margin: 0 auto;
+    max-width: 1850px;
+    margin: 0 250px 0 auto;
     padding: 0 10px;
     z-index: 1;
 }
@@ -65,7 +66,7 @@ body {
     display: block;
     text-align: center;
     background-color: var(--primary);
-    color: var(--tertiary);
+    color: var(--white);
     padding: 3px 0;
     border-radius: 50px;
     font-size: var(--font-size-p-secondary) !important;
@@ -74,6 +75,7 @@ body {
 
 .btn-secondary:hover {
     background-color: var(--secondary);
+    color: var(--primary);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -141,7 +143,7 @@ header {
     border-radius: 8px;
     padding: 5px 10px;
     border: 2px solid var(--light-black);
-    background-color: var(--light-black);
+    background-color: var(--primary);
     color: var(--secondary);
     margin: 0;
 }
@@ -447,13 +449,16 @@ header {
 
 .show-right .buttons .primary {
     background-color: var(--primary);
+    color: var(--white);
     border: 2px solid var(--primary);
+    border-radius: 8px;
 }
 
 .show-right .buttons .secondary {
     background-color: var(--white);
-    color: var(--primary-dark);
+    color: var(--primary);
     border: 2px solid var(--primary);
+    border-radius: 8px;
 }
 
 .show-right .buttons button {
@@ -549,11 +554,13 @@ header {
     height: 500px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: var(--secondary);
+    border-radius: 8px;
 }
 
 .performance .game-container > .game > img {
     width: 100%;
     height: 333.25px;
+    border-radius: 8px 8px 0 0;
 }
 
 .performance .game-container > .game > .info {
@@ -649,11 +656,20 @@ header {
 .admin table th {
     color: var(--tertiary);
     padding: 10px 0 10px 15px;
+    border-bottom: 2px solid var(--grey);
 }
 
 .admin table td {
-    border-top: 2px solid var(--grey);
     padding: 10px 0 10px 15px;
+}
+
+.admin table tr {
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.admin table tr:nth-child(even) {
+    background-color: var(--grey);
 }
 
 .admin-table-actions {
