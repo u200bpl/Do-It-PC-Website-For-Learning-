@@ -21,6 +21,12 @@ use App\Http\Controllers\UserController;
 */
 
 Route::get('/', [PagesController::class, 'index']);
+Route::get('/algemene-voorwaarden', [PagesController::class, 'tos']);
+Route::get('/privacy-verklaring', [PagesController::class, 'privacy']);
+Route::get('/klachten', [PagesController::class, 'complaint']);
+Route::get('/contact', [PagesController::class, 'contact']);
+Route::get('/over-ons', [PagesController::class, 'aboutus']);
+Route::get('/veelgestelde-vragen', [PagesController::class, 'faq']);
 
 Route::middleware(['web', 'auth'])->group(function () {
     Route::resource('/account', AccountController::class);

@@ -1,10 +1,8 @@
 :root {
     --primary: #024B95;
-    --primary-rgb: 63, 213, 13;
-    --primary-dark: #2f9e0a;
-    --primary-dark-rgb: 47, 158, 10;
+    --primary-rgb: 2, 75, 149;
     --secondary: #ffffff;
-    --tertiary: #000000;
+    --black: #000000;
     --light-black: rgb(51, 51, 51);
     --grey: #e5e5e5;
     --grey-dark: #818B9D;
@@ -18,7 +16,6 @@
     --font-size-p: 16px;
     --font-size-p-secondary: 13px;
     --font-size-h3: 17px;
-
 }
 
 * {
@@ -56,10 +53,11 @@ body {
     font-size: var(--font-size-p);
     font-weight: 500;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .btn-primary:hover {
-    background-color: var(--primary-dark);
+    background-color: var(--primary);
 }
 
 .btn-secondary {
@@ -133,7 +131,7 @@ header {
 
 .header-menu a {
     text-decoration: none;
-    color: var(--tertiary);
+    color: var(--black);
     font-size: var(--font-size-a);
     font-weight: 500;
     margin-right: 30px;
@@ -142,7 +140,7 @@ header {
 .header-menu .btn {
     border-radius: 8px;
     padding: 5px 10px;
-    border: 2px solid var(--light-black);
+    border: 2px solid var(--primary);
     background-color: var(--primary);
     color: var(--secondary);
     margin: 0;
@@ -172,7 +170,7 @@ header {
 
 .header-cart a {
     text-decoration: none;
-    color: var(--tertiary);
+    color: var(--black);
     font-size: var(--font-size-a);
     font-weight: 500;
 }
@@ -293,97 +291,6 @@ header {
     height: 250px;
 }
 
-/* GAMING PCS */
-.gamingpcs {
-    padding-top: 10px;
-}
-
-.gamingpcs-text {
-    display: flex;
-    justify-content: flex-start;
-    align-items: first baseline;
-}
-
-.gamingpcs-text > a {
-    margin-right: 5px;
-}
-
-.gamingpcs a {
-    text-decoration: none;
-    color: var(--tertiary);
-    font-size: var(--font-size-a);
-    font-weight: 500;
-}
-
-.gamingpcs-text > a:hover {
-    color: var(--primary);
-}
-
-.gamingpcs p {
-    font-size: var(--font-size-p-secondary);
-}
-
-.gamingpcs-show-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 10px;
-}
-
-.gamingpcs-show-item {
-    background-color: var(--secondary);
-    border-radius: 8px;
-    width: 215px;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.gamingpcs-show-item h3 {
-    font-size: var(--font-size-h3);
-    font-weight: 600;
-    margin-top: 10px;
-}
-
-.gamingpcs-show-item a {
-    width: 100%;
-    height: 100%;
-}
-
-.gamingpcs-show-item img {
-    max-height: 150px;
-    height: 150px;
-    display: block;
-    margin: 0 auto;
-}
-
-.gamingpcs-show-item p {
-    margin: 10px 0;
-}
-
-.gamingpcs-show-item p span {
-    font-size: var(--font-size-p);
-    font-weight: 500;
-}
-
-.gamingpcs-show-item p span strike {
-    font-weight: 300;
-}
-
-.gamingpcs-show-item:hover {
-    transform: scale(1.05);
-}
-
-.gamingpcs-show-info > p {
-    font-size: var(--font-size-p-secondary);
-    font-weight: 300;
-}
-
-.gamingpcs-show-info > p span {
-    font-size: var(--font-size-p-secondary) !important;
-    font-weight: 500;
-}
-
 /* SHOW GAMING PC */
 .show-gamingpc {
     padding-top: 150px;
@@ -492,7 +399,7 @@ header {
     position: relative;
     margin-left: 10px;
     margin-bottom: -30px;
-    color: var(--tertiary);
+    color: var(--black);
 }
 
 .form-layout input {
@@ -504,8 +411,8 @@ header {
 }
 
 .form-layout input:focus {
-    border: 1px solid var(--primary-dark);
-    color: var(--primary-dark);
+    border: 1px solid var(--primary);
+    color: var(--primary);
 }
 
 .form input[type="submit"] {
@@ -538,7 +445,7 @@ header {
 }
 
 .performance .description > h2 > span {
-    color: var(--primary-dark);
+    color: var(--primary);
 }
 
 .performance .game-container {
@@ -575,6 +482,7 @@ header {
 
 .performance .game-container > .game > .info > .fps {
     background-color: var(--primary);
+    color: var(--white);
 }
 
 .performance .game-container > .game > .info > .fps > p {
@@ -654,7 +562,7 @@ header {
 }
 
 .admin table th {
-    color: var(--tertiary);
+    color: var(--black);
     padding: 10px 0 10px 15px;
     border-bottom: 2px solid var(--grey);
 }
@@ -680,7 +588,7 @@ header {
 
 .admin table td a {
     text-decoration: none;
-    color: var(--tertiary);
+    color: var(--black);
 }
 
 .admin table td button {
@@ -721,7 +629,7 @@ header {
 }
 
 .form-group input:focus {
-    border: 1px solid var(--primary-dark);
+    border: 1px solid var(--primary);
 }
 
 .form-group select {
@@ -732,7 +640,7 @@ header {
 }
 
 .form-group select:focus {
-    border: 1px solid var(--primary-dark);
+    border: 1px solid var(--primary);
 }
 
 /* USER Page */
@@ -801,7 +709,7 @@ header {
 }
 
 .user table th {
-    color: var(--tertiary);
+    color: var(--black);
     padding: 10px 0 10px 15px;
 }
 
@@ -818,7 +726,7 @@ header {
 
 .user table td a {
     text-decoration: none;
-    color: var(--tertiary);
+    color: var(--black);
 }
 
 .user table td button {
@@ -906,7 +814,7 @@ header {
     border: 2px solid var(--danger);
     display: block;
     background-color: rgba(183, 0, 0, 0.2);
-    color: var(--white);
+    color: #000000;
     padding: 10px;
     text-align: center;
     font-weight: 500;

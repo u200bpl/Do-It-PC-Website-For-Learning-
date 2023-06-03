@@ -43,7 +43,7 @@
 
 .admin-navbar li a {
     display: block;
-    color: var(--tertiary);
+    color: var(--black);
     padding: 8px 16px;
     text-decoration: none;
     font-size: var(--font-size-a);
@@ -53,7 +53,7 @@
 
 .admin-navbar li a.active {
     background-color: var(--primary);
-    color: var(--tertiary);
+    color: var(--white);
 }
 
 .admin-navbar li a:hover:not(.active) {
@@ -69,7 +69,7 @@
     text-align: left;
     background-color: transparent;
     border: none;
-    color: var(--tertiary);
+    color: var(--black);
     padding: 12px 18px;
     font-size: var(--font-size-a);
     border-radius: 10px;
@@ -80,7 +80,7 @@
 .admin-navbar li button:hover {
     cursor: pointer;
     background-color: rgba(var(--primary-rgb), 0.5);
-    color: var(--tertiary);
+    color: var(--black);
 }
 
 .admin-navbar li button i {
@@ -96,7 +96,7 @@
 }
 
 .admin-navbar .dropdown-container a {
-    color: var(--tertiary);
+    color: var(--black);
     padding: 4px 18px;
     margin: 0 25px;
     text-decoration: none;
@@ -111,27 +111,11 @@
 }
 
 .admin-navbar .active button i {
-    color: var(--primary);
+    color: var(--white);
+}
+
+.admin-navbar .active button {
+    background-color: var(--primary);
+    color: var(--white);
 }
 </style>
-
-<script>
-/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content */
-var dropdown = document.getElementsByClassName("dropdown-btn");
-var icon = document.getElementsByClassName("fa-circle");
-
-var i;
-
-for (i = 0; i < dropdown.length; i++) {
-    dropdown[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var dropdownContent = this.nextElementSibling;
-
-        if (dropdownContent.style.display === "flex") {
-            dropdownContent.style.display = "none";
-        } else {
-            dropdownContent.style.display = "flex";
-        }
-    });
-}
-</script>

@@ -159,8 +159,8 @@
         z.style.display = "none";
 
         xp.style.color = "var(--primary)";
-        yp.style.color = "var(--tertiary)";
-        zp.style.color = "var(--tertiary)";
+        yp.style.color = "var(--black)";
+        zp.style.color = "var(--black)";
     }
 
     function myFunction2() {
@@ -174,9 +174,9 @@
         y.style.display = "block";
         z.style.display = "none";
 
-        xp.style.color = "var(--tertiary)";
+        xp.style.color = "var(--black)";
         yp.style.color = "var(--primary)";
-        zp.style.color = "var(--tertiary)";
+        zp.style.color = "var(--black)";
     }
 
     function myFunction3() {
@@ -190,8 +190,8 @@
         y.style.display = "none";
         z.style.display = "block";
 
-        xp.style.color = "var(--tertiary)";
-        yp.style.color = "var(--tertiary)";
+        xp.style.color = "var(--black)";
+        yp.style.color = "var(--black)";
         zp.style.color = "var(--primary)";
     }
 </script>

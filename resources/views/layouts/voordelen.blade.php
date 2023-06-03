@@ -16,18 +16,18 @@
                     <i class="fa-solid fa-truck-fast"></i>
                 </div>
                 <div class="voordelen-card-text">
-                    <h3>Gratis verzending</h3>
-                    <p>Gratis verzending voor alle orders</p>
+                    <h3>Plug en Play</h3>
+                    <p>Sluit jouw pc aan en start meteen met gamen!</p>
                 </div>
             </div>
 
             <div class="voordelen-card">
                 <div class="voordelen-card-icon">
-                    <i class="fa-solid fa-truck-fast"></i>
+                    <i class="fa-solid fa-dolly"></i>
                 </div>
                 <div class="voordelen-card-text">
-                    <h3>Gratis verzending</h3>
-                    <p>Gratis verzending voor alle orders</p>
+                    <h3>Kant en klaar</h3>
+                    <p>Kant en klaar bij jouw thuishbezorgd!</p>
                 </div>
             </div>
         </div>
@@ -37,7 +37,7 @@
 <style>
 .voordelen {
     background-color: var(--bg-color);
-    padding: 50px 0;
+    padding: 50px 0 25px 0;
 }
 
 .voordelen-flex {

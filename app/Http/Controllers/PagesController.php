@@ -13,9 +13,51 @@ class PagesController extends Controller
      */
     public function index()
     {
-        $gamingpcs = Gamingpc::all();
+        $gamingpcs = Gamingpc::take(5)->get();
         return view('welcome', [
             'gamingpcs' => $gamingpcs
+        ]);
+    }
+
+    public function tos()
+    {
+        return view('pages/info/tos', [
+
+        ]);
+    }
+
+    public function privacy()
+    {
+        return view('pages/info/privacy', [
+
+        ]);
+    }
+
+    public function complaint()
+    {
+        return view('pages/info/complaint', [
+
+        ]);
+    }
+
+    public function contact()
+    {
+        return view('pages/info/contact', [
+
+        ]);
+    }
+
+    public function aboutus()
+    {
+        return view('pages/info/aboutus', [
+
+        ]);
+    }
+
+    public function faq()
+    {
+        return view('pages/info/faq', [
+
         ]);
     }
 
