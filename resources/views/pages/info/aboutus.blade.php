@@ -9,11 +9,11 @@
 
             <p>Ons streven is dat jij de perfecte PC vindt voor alle applicaties en games die jij wilt spelen. Daarbij wordt gebruik gemaakt van onze handige tools voor zowel gaming PC’s als PC’s voor content creators. Maar om helemaal zeker te weten welke pc de juiste voor jou is, kun je gebruik maken van onze live-chat waar onze specialisten je graag helpen met je keuze.</p>
 
-            Bij Redux Gaming krijg je naast <span>gratis verzending boven de €250</span> het volgende:
+            Bij Do-It PC krijg je naast <span>gratis verzending boven de €250</span> het volgende:
             <section class="sec1">
                 <h3>3 jaar garantie</h3>
                 
-                <p>Wij staan bij Redux Gaming voor service. Bij ons ontvang je standaard 3 jaar garantie op je PC. Is er iets stuk of werkt iets niet maar heb je zelf al eens je case opengemaakt? Wij doen er niet moeilijk over, je garantie vervalt hierdoor niet. Wij proberen je juist zo snel mogelijk te helpen, dit gebeurt in eerste instantie op afstand zodat eenvoudige problemen snel kunnen worden opgelost. Is het op deze manier niet gelukt? Dan kan je je PC naar ons opsturen zodat wij hem kunnen repareren. Dit doen we zo snel mogelijk, zodat je weer zo snel mogelijk kan genieten van je games.</p>
+                <p>Wij staan bij Do-It PC voor service. Bij ons ontvang je standaard 3 jaar garantie op je PC. Is er iets stuk of werkt iets niet maar heb je zelf al eens je case opengemaakt? Wij doen er niet moeilijk over, je garantie vervalt hierdoor niet. Wij proberen je juist zo snel mogelijk te helpen, dit gebeurt in eerste instantie op afstand zodat eenvoudige problemen snel kunnen worden opgelost. Is het op deze manier niet gelukt? Dan kan je je PC naar ons opsturen zodat wij hem kunnen repareren. Dit doen we zo snel mogelijk, zodat je weer zo snel mogelijk kan genieten van je games.</p>
 
                 <p>Extra snel je PC terug bij je thuis? Dan bieden we een premium garantie waarbij de wachttijd op een reparatie wordt verkort. Defecte onderdelen worden dan namelijk direct vervangen, wij gaan in dit geval niet wachten op RMA-afhandeling vanuit onze leverancier. Dit is bij de standaard garantie wel het geval. De meerprijs voor premium garantie is €60,-</p>
             </section>
