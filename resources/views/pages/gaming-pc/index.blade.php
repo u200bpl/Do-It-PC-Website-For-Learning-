@@ -1,8 +1,14 @@
 @extends('layouts.base')
 @section('content')
 
-@include('layouts.game-pc-hero')
+<div class="spacer"></div>
 @include('layouts.voordelen')
 @include('layouts.game-pcs')
 
 @endsection
+
+<style>
+.spacer {
+    height: 90px;
+}
+</style>

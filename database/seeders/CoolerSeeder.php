@@ -39,5 +39,10 @@ class CoolerSeeder extends Seeder
             'name' => "Corsair iCUE H150i RGB Elite",
             'price' => 135,
         ]);
+
+        Cooler::create([
+            'name' => "Corsair iCUE H100i ELITE LCD XT",
+            'price' => 249,
+        ]);
     }
 }

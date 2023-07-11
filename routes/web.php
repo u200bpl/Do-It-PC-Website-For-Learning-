@@ -27,6 +27,10 @@ Route::get('/klachten', [PagesController::class, 'complaint']);
 Route::get('/contact', [PagesController::class, 'contact']);
 Route::get('/over-ons', [PagesController::class, 'aboutus']);
 Route::get('/veelgestelde-vragen', [PagesController::class, 'faq']);
+Route::get('/reparatie', [PagesController::class, 'repair']);
+Route::get('/custom-pc', [PagesController::class, 'custompc']);
+Route::get('/gaming-pc', [GamingpcController::class, 'index'])->name('gamingpc.index');
+Route::get('/gaming-pc/{id}', [GamingpcController::class, 'show'])->name('gamingpc.show');
 
 Route::middleware(['web', 'auth'])->group(function () {
     Route::resource('/account', AccountController::class);
@@ -45,8 +49,5 @@ Route::middleware(['web', 'isAdmin'])->group(function () {
     Route::put('/gaming-pc/{id}', [GamingpcController::class, 'update'])->name('gamingpc.update');
     Route::delete('/gaming-pc/{id}', [GamingpcController::class, 'destroy'])->name('gamingpc.destroy');
 });
-
-Route::get('/gaming-pc', [GamingpcController::class, 'index'])->name('gamingpc.index');
-Route::get('/gaming-pc/{id}', [GamingpcController::class, 'show'])->name('gamingpc.show');
 
 require __DIR__.'/auth.php';

@@ -22,7 +22,7 @@
 
                                     <hr>
                                     <div class="test">
-                                        <p><span>€{{ $gamingpc->price }}</span></p>
+                                        <p><span>€{{ $gamingpc->price }},00,00</span></p>
                                         @if ($gamingpc->stock > 0)
                                             <p class="btn-secondary">Bekijk PC</p>
                                         @else

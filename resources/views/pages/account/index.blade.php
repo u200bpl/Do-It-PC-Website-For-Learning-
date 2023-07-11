@@ -197,3 +197,97 @@
 </script>
 
 @endsection
+
+<style>
+.user {
+    position: relative;
+    padding-top: 150px;
+}
+
+.user-item-nav-container {
+    display: flex;
+    border-bottom: 2px solid var(--grey);
+}
+
+.user-item-nav-item {
+    margin: 0 10px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.user-item-nav-container > .active {
+    color: var(--primary);
+}
+
+.user-item-info {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.user-item-info form {
+    width: 560px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: var(--secondary);
+    border-radius: 8px;
+}
+
+.user-item-left {
+    margin: 0 10px 0 0;
+}
+
+.user-item-right {
+    margin: 0 0 0 10px;
+}
+
+.user-item-info span {
+    font-weight: 600;
+}
+
+.user-item-info a {
+    color: var(--grey-dark);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.user table {
+    background-color: var(--secondary);
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.user table th {
+    color: var(--black);
+    padding: 10px 0 10px 15px;
+}
+
+.user table td {
+    border-top: 2px solid var(--grey);
+    padding: 10px 0 10px 15px;
+}
+
+.user-table-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user table td a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.user table td button {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    color: var(--danger);
+}
+</style>

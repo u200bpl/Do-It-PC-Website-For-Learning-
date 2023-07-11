@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Country;
+use App\Models\Gamingpc;
 
 class UserController extends Controller
 {
@@ -15,6 +17,7 @@ class UserController extends Controller
     public function index()
     {
         return view('pages.admin.user.index', [
+            'gamingpcs' => Gamingpc::orderBy('price','asc')->get(),
             'users' => User::all()
         ]);
     }

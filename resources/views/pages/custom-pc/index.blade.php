@@ -1,20 +1,24 @@
 @extends('layouts.base')
 @section('content')
 
-<section class="contact">
+<section class="repair">
     <div class="container">
-        <div class="contact-container">
-            <h1>Contact met Do-It PC</h1>
+        <div class="repair-container">
+            <h1>Custom Gaming PC met Do-It PC</h1>
             <section class="sec1">
-                <p>Om onze klanten zo goed mogelijk te faciliteren hebben wij diverse mogelijkheden om contact met ons op te nemen. Goede gestroomlijnde communicatie vinden wij belangrijk, wij zullen dus zo snel en goed mogelijk antwoord geven zodat jij snel en goed geholpen bent.</p>
-                <p><span>Live-Chat:</span> Wanneer je vragen hebt kun je het beste bij ons terecht via onze live-chat op de website. Deze vind je rechts onderin het scherm. Wanneer we online zijn kun je direct met onze helpdesk chatten, wanneer we niet online zijn kun je een bericht achterlaten samen met je e-mail adres en dan nemen we binnen 24 uur contact met je op (met uitzondering van het weekend).</p>
-                <p><span>Email:</span> Reguliere manieren van contact zijn natuurlijk ook mogelijk, stuur je e-mails naar info@doitpc.nl.</p>
+                <p>Om jouw Game PC bij Do-It PC aan te melden, hanteren wij de volgende stappen:</p>
+                <ol>
+                    <li>Aanmelding:</li>
+                    <ul>
+                        <li>Neem contact op met Do-It PC en verstrekt gedetailleerde informatie over het probleem waarmee je te maken hebt. Ons deskundige team staat klaar om je te assisteren.</li>
+                    </ul>
+                </ol>
             </section>
 
             <section class="sec2">
                 <h3>Neem contact met ons op</h3>
-                <div class="contact-flex">
-                    <div class="contact-content">
+                <div class="repair-flex">
+                    <div class="repair-content">
                         <form action="">
                             <div class="form-group">
                                 <label for="name">Naam</label>
@@ -32,8 +36,13 @@
                             </div>
 
                             <div class="form-group">
+                                <label for="price">Prijs</label>
+                                <input type="number" name="price" id="price" placeholder="2950" class="form-control">
+                            </div>
+
+                            <div class="form-group">
                                 <label for="message">Bericht</label>
-                                <textarea name="message" id="message" cols="30" rows="10" placeholder="Ik heb een vraag over de ....." class="form-control"></textarea>
+                                <textarea name="message" id="message" cols="30" rows="10" placeholder="Ik wil graag een gamepc met ....." class="form-control"></textarea>
                             </div>
 
                             <div class="form-group">
@@ -42,7 +51,7 @@
                         </form>
                     </div>
 
-                    <div class="contact-content">
+                    <div class="repair-content">
                         <h3>Do-it PC</h3>
                         <a href="">info@doitpc.nl</a>
                         <p>Benthuizenstraat 27 (Geen bezoek)</p>
@@ -59,99 +68,99 @@
 @endsection
 
 <style>
-.contact {
+.repair {
     padding-top: 150px;
 }
 
-.contact > .container > .contact-container {
+.repair > .container > .repair-container {
     background-color: #ffffff;
     padding: 50px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.contact > .container > .contact-container > section {
+.repair > .container > .repair-container > section {
     margin: 50px 0 0 0;
 }
 
-.contact > .container > .contact-container > .btn-primary {
+.repair > .container > .repair-container > .btn-primary {
     max-width: fit-content;
 }
 
-.contact > .container > .contact-container h1 {
+.repair > .container > .repair-container h1 {
     margin: 25px 0;
     font-size: 28px;
 }
 
-.contact > .container > .contact-container h3 {
+.repair > .container > .repair-container h3 {
     font-size: 18px;
 }
 
-.contact > .container > .contact-container p {
+.repair > .container > .repair-container p {
     font-size: 16px;
     padding: 10px 0;
 }
 
-.contact > .container > .contact-container p span {
+.repair > .container > .repair-container p span {
     font-weight: bold;
 }
 
-.contact > .container > .contact-container ol {
+.repair > .container > .repair-container ol {
     margin: 0 0 0 35px;
 }
 
-.contact > .container > .contact-container ul {
+.repair > .container > .repair-container ul {
     margin: 0 0 0 35px;
 }
 
-.contact > .container > .contact-container strong {
+.repair > .container > .repair-container strong {
     font-weight: bold;
 }
 
-.contact > .container > .contact-container .art6 .par {
+.repair > .container > .repair-container .art6 .par {
     margin: 10px 0 0 -35px;
 }
 
-.contact > .container > .contact-container > .date {
+.repair > .container > .repair-container > .date {
     margin: -35px 0 0 0;
 }
 
-.contact > .container > .contact-container form > .form-group {
+.repair > .container > .repair-container form > .form-group {
     margin: 10px 0;
     width: 100%;
 }
 
-.contact > .container > .contact-container form > .form-group label {
+.repair > .container > .repair-container form > .form-group label {
     font-weight: bold;
 }
 
-.contact > .container > .contact-container form > .form-group textarea {
+.repair > .container > .repair-container form > .form-group textarea {
     padding: 10px;
     border: 1px solid var(--grey);
     border-radius: 8px;
     outline: none;
 }
 
-.contact > .container > .contact-container form > .form-group textarea:focus {
+.repair > .container > .repair-container form > .form-group textarea:focus {
     border: 1px solid var(--primary);
 }
 
-.contact > .container > .contact-container .contact-flex {
+.repair > .container > .repair-container .repair-flex {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 75px;
 }
 
-.contact > .container > .contact-container .contact-flex > .contact-content {
+.repair > .container > .repair-container .repair-flex > .repair-content {
     width: 100%;
 }
 
-.contact > .container > .contact-container .contact-flex > .contact-content p {
+.repair > .container > .repair-container .repair-flex > .repair-content p {
     padding: 5px 0;
 }
 
-.contact > .container > .contact-container .contact-flex > .contact-content a {
+.repair > .container > .repair-container .repair-flex > .repair-content a {
     display: block;
     margin: 5px 0;
     color: var(--primary);

@@ -39,5 +39,10 @@ class PowersuplySeeder extends Seeder
             'name' => "1000W Gold",
             'price' => 135,
         ]);
+
+        Powersuply::create([
+            'name' => " Corsair RM850x 850W",
+            'price' => 179,
+        ]);
     }
 }

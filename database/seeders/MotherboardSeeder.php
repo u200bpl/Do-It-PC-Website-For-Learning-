@@ -39,5 +39,10 @@ class MotherboardSeeder extends Seeder
             'name' => "Z790",
             'price' => 135,
         ]);
+
+        Motherboard::create([
+            'name' => "Gigabyte B650I AORUS ULTRA",
+            'price' => 450,
+        ]);
     }
 }

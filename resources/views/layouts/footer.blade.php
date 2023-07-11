@@ -12,30 +12,19 @@
             </div>
 
             <div class="footer-content">
-                <h5>Informatie</h5>
-                <a href="">Contact</a>
-                <a href="">Over ons</a>
-                <a href="">Veelgestelde Vragen</a>
-                <a href="/algemene-voorwaarden">Algemene voorwaarden</a>
-                <a href="">Privacy Verklaring</a>
-            </div>
-
-            <div class="footer-content">
-                <h5>Informatie</h5>
-                <a href="">Contact</a>
-                <a href="">Over ons</a>
-                <a href="">Veelgestelde Vragen</a>
-                <a href="/algemene-voorwaarden">Algemene voorwaarden</a>
-                <a href="">Privacy Verklaring</a>
+                <h5>Game Pc's</h5>
+                @foreach ($gamingpcs->take(5) as $gamingpc)
+                    <a href="/gaming-pc/{{$gamingpc->id}}">{{ $gamingpc->name }}</a>
+                @endforeach
             </div>
 
             <div class="footer-content">
                 <h5>Do-It PC</h5>
                 <a href="">info@foitpc.nl</a>
-                <p>Tel: <a href="">06........</a></p>
                 <p>Benthuizenstraat 27 (Geen bezoek)</p>
-                <p>KVK: ........</p>
-                <p>BTW: ..............</p>
+                <p><span>Tel:</span> <a href="">06........</a></p>
+                <p><span>KVK:</span> ........</p>
+                <p><span>BTW:</span> ..............</p>
             </div>
         </div>
     </div>
@@ -85,6 +74,10 @@ footer > .container > .footer-flex > .footer-content > p {
     font-weight: 400;
     margin-bottom: 5px;
     color: #000000;
+}
+
+footer > .container > .footer-flex > .footer-content > p > span {
+    font-weight: bold;
 }
 
 footer > .container > .footer-flex > .footer-content > p > a {

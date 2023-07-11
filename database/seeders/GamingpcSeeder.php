@@ -28,7 +28,7 @@ class GamingpcSeeder extends Seeder
             'hdd_id' => 1,
             'cooler_id' => 1,
             'powersuply_id' => 1,
-            'price' => "599,00",
+            'price' => 599,
             'stock' => '1',
         ]);
 
@@ -45,7 +45,7 @@ class GamingpcSeeder extends Seeder
             'hdd_id' => 2,
             'cooler_id' => 2,
             'powersuply_id' => 2,
-            'price' => "1299,00",
+            'price' => 1299,
             'stock' => '0',
         ]);
 
@@ -62,7 +62,7 @@ class GamingpcSeeder extends Seeder
             'hdd_id' => 3,
             'cooler_id' => 3,
             'powersuply_id' => 3,
-            'price' => "1999,00",
+            'price' => 1999,
             'stock' => '80',
         ]);
 
@@ -79,7 +79,7 @@ class GamingpcSeeder extends Seeder
             'hdd_id' => 4,
             'cooler_id' => 4,
             'powersuply_id' => 4,
-            'price' => "2499,00",
+            'price' => 2499,
             'stock' => '69',
         ]);
 
@@ -96,8 +96,25 @@ class GamingpcSeeder extends Seeder
             'hdd_id' => 5,
             'cooler_id' => 5,
             'powersuply_id' => 5,
-            'price' => "3499,00",
+            'price' => 3499,
             'stock' => '420',
+        ]);
+
+        Gamingpc::create([
+            'name' => "Game PC R777X RT48",
+            'description' => "De mini Game PC voor iedere gamer!",
+            'image' => "game-pc-ultimate.png",
+            'case_id' => 6,
+            'motherboard_id' => 6,
+            'processor_id' => 6,
+            'ram_id' => 6,
+            'graphicscard_id' => 6,
+            'ssd_id' => 6,
+            'hdd_id' => 1,
+            'cooler_id' => 6,
+            'powersuply_id' => 6,
+            'price' => 3499,
+            'stock' => '1',
         ]);
     }
 }

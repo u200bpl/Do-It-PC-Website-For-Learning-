@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Country;
+use App\Models\Gamingpc;
 
 class AccountController extends Controller
 {
@@ -14,10 +15,12 @@ class AccountController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    {   
+
         return view('pages.account.index', [
             'users' => User::all(),
             'countries' => Country::all(),
+            'gamingpcs' => Gamingpc::orderBy('price','asc')->get(),
         ]);
     }
 

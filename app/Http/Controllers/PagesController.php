@@ -13,51 +13,64 @@ class PagesController extends Controller
      */
     public function index()
     {
-        $gamingpcs = Gamingpc::take(5)->get();
         return view('welcome', [
-            'gamingpcs' => $gamingpcs
+            'gamingpcs' => Gamingpc::orderBy('price','asc')->get(),            
         ]);
     }
 
     public function tos()
     {
-        return view('pages/info/tos', [
-
+        return view('pages.info.tos', [
+            'gamingpcs' => Gamingpc::orderBy('price','asc')->get(),
         ]);
     }
 
     public function privacy()
-    {
-        return view('pages/info/privacy', [
-
+    {   
+        return view('pages.info.privacy', [
+            'gamingpcs' => Gamingpc::orderBy('price','asc')->get(),
         ]);
     }
 
     public function complaint()
-    {
-        return view('pages/info/complaint', [
-
+    {   
+        return view('pages.info.complaint', [
+            'gamingpcs' => Gamingpc::orderBy('price','asc')->get(),
         ]);
     }
 
     public function contact()
-    {
-        return view('pages/info/contact', [
-
+    {   
+        return view('pages.info.contact', [
+            'gamingpcs' => Gamingpc::orderBy('price','asc')->get(),
         ]);
     }
 
     public function aboutus()
-    {
-        return view('pages/info/aboutus', [
-
+    {   
+        return view('pages.info.aboutus', [
+            'gamingpcs' => Gamingpc::orderBy('price','asc')->get(),
         ]);
     }
 
     public function faq()
-    {
-        return view('pages/info/faq', [
+    {   
+        return view('pages.info.faq', [
+            'gamingpcs' => Gamingpc::orderBy('price','asc')->get(),
+        ]);
+    }
 
+    public function repair()
+    {   
+        return view('pages.info.repair', [
+            'gamingpcs' => Gamingpc::orderBy('price','asc')->get(),
+        ]);
+    }
+
+    public function custompc()
+    {   
+        return view('pages.custom-pc.index', [
+            'gamingpcs' => Gamingpc::orderBy('price','asc')->get(),
         ]);
     }
 

@@ -25,7 +25,7 @@ class GamingpcController extends Controller
     public function index()
     {
         return view('pages.gaming-pc.index', [
-            'gamingpcs' => Gamingpc::all()
+            'gamingpcs' => Gamingpc::orderBy('price','asc')->get(),
         ]);
     }
 
@@ -36,7 +36,7 @@ class GamingpcController extends Controller
      */
     public function create() {
         return view('pages.gaming-pc.create', [
-            'gamingpcs' => Gamingpc::all(),
+            'gamingpcs' => Gamingpc::orderBy('price','asc')->get(),
             'processors' => Processor::all(),
             'graphicscards' => Graphicscard::all(),
             'rams' => Ram::all(),
@@ -83,6 +83,7 @@ class GamingpcController extends Controller
     public function show($id)
     {
         return view('pages.gaming-pc.show', [
+            'gamingpcs' => Gamingpc::orderBy('price','asc')->get(),
             'gamingpc' => Gamingpc::findorfail($id),
             'performances' => Performance::where('gamingpc_id', $id)->get(),
             'games' => Game::all()
@@ -99,7 +100,7 @@ class GamingpcController extends Controller
     {   
         $gamingpc = Gamingpc::findOrFail($id);
         return view('pages.gaming-pc.edit', [
-            'gamingpcs' => Gamingpc::all(),
+            'gamingpcs' => Gamingpc::orderBy('price','asc')->get(),
             'processors' => Processor::all(),
             'graphicscards' => Graphicscard::all(),
             'rams' => Ram::all(),

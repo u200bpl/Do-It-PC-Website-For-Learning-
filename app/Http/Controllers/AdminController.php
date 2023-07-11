@@ -17,7 +17,7 @@ class AdminController extends Controller
     public function index()
     {
         return view('pages.admin.index', [
-            'gamingpcs' => Gamingpc::all(),
+            'gamingpcs' => Gamingpc::orderBy('price','asc')->get(),
             'users' => User::all()
         ]);
     }

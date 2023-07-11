@@ -39,5 +39,10 @@ class SsdSeeder extends Seeder
             'name' => "2TB NVMe",
             'price' => 135,
         ]);
+
+        Ssd::create([
+            'name' => "Samsung 990 Pro 2TB",
+            'price' => 179,
+        ]);
     }
 }

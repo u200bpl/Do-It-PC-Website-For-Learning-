@@ -39,5 +39,10 @@ class RamSeeder extends Seeder
             'name' => "32GB DDR5",
             'price' => 135,
         ]);
+
+        Ram::create([
+            'name' => "Corsair Vengeance RGB 32GB",
+            'price' => 139,
+        ]);
     }
 }

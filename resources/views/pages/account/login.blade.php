@@ -15,7 +15,7 @@
     @endif
 
     <div class="form-section">
-        <div class="form-layout">
+        <div class="">
             <label for="email">Email</label>
             <input type="text" id="email" type="email" name="email">
         </div>

@@ -39,5 +39,10 @@ class GraphicscardSeeder extends Seeder
             'name' => "Nvidia GeForce RTX 4080",
             'price' => 135,
         ]);
+
+        Graphicscard::create([
+            'name' => "Palit GamingPro GeForce RTX 4080",
+            'price' => 1500,
+        ]);
     }
 }

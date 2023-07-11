@@ -13,7 +13,7 @@
 
             <div class="voordelen-card">
                 <div class="voordelen-card-icon">
-                    <i class="fa-solid fa-truck-fast"></i>
+                    <i class="fa-solid fa-plug"></i>
                 </div>
                 <div class="voordelen-card-text">
                     <h3>Plug en Play</h3>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Order;
+use App\Models\Gamingpc;
 
 class OrderController extends Controller
 {
@@ -15,6 +16,7 @@ class OrderController extends Controller
     public function index()
     {
         return view('pages.admin.order.index', [
+            'gamingpcs' => Gamingpc::orderBy('price','asc')->get(),
             'orders' => Order::all()
         ]);
     }

@@ -39,5 +39,10 @@ class ProcessorSeeder extends Seeder
             'name' => "Intel Core i7 13700K",
             'price' => 135,
         ]);
+
+        Processor::create([
+            'name' => "AMD Ryzen 7 7700X",
+            'price' => 330,
+        ]);
     }
 }

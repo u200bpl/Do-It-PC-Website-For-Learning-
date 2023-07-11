@@ -39,5 +39,10 @@ class CaseSeeder extends Seeder
             'name' => "Case 5",
             'price' => 135,
         ]);
+
+        PcCase::create([
+            'name' => "Fractal Design Meshify 2 Nano Mini",
+            'price' => 95,
+        ]);
     }
 }
